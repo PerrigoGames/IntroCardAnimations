@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable name="fragment" type="com.perrigogames.introcardanimationdemo.fragments.TextZoneTestFragment"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/layout_text_zone_test"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/zone_text"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:background="@color/debugBlack"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/button_center"/>
+
+        <TextView
+            android:id="@+id/text_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Content Content"
+            app:layout_constraintTop_toTopOf="@id/zone_text"
+            app:layout_constraintBottom_toBottomOf="@id/zone_text"
+            app:layout_constraintStart_toStartOf="@id/zone_text"
+            app:layout_constraintEnd_toEndOf="@id/zone_text"/>
+
+        <Button
+            android:id="@id/button_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Center"
+            android:onClick="@{fragment::onCenterClicked}"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/button_side"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <Button
+            android:id="@id/button_side"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Side"
+            android:onClick="@{fragment::onSideClicked}"
+            app:layout_constraintTop_toTopOf="@id/button_center"
+            app:layout_constraintBottom_toBottomOf="@id/button_center"
+            app:layout_constraintStart_toEndOf="@id/button_center"
+            app:layout_constraintEnd_toStartOf="@+id/button_corner"/>
+
+        <Button
+            android:id="@id/button_corner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Corner"
+            android:onClick="@{fragment::onCornerClicked}"
+            app:layout_constraintTop_toTopOf="@id/button_center"
+            app:layout_constraintBottom_toBottomOf="@id/button_center"
+            app:layout_constraintStart_toEndOf="@id/button_side"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </android.support.constraint.ConstraintLayout>
+</layout>
