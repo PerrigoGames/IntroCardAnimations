@@ -12,14 +12,12 @@
             android:id="@+id/text_settings_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Settings" />
-
-        <android.support.constraint.Guideline
-            android:id="@+id/guideline_control_divider"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_end="128dp" />
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="Settings"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
 
     </android.support.constraint.ConstraintLayout>
 </layout>

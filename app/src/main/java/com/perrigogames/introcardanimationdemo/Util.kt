@@ -1,7 +1,9 @@
 package com.perrigogames.introcardanimationdemo
 
+import android.content.res.Resources
 import android.support.constraint.ConstraintLayout
 import android.support.constraint.ConstraintSet
+import android.util.TypedValue
 import android.view.ViewGroup
 import com.transitionseverywhere.*
 
@@ -82,5 +84,9 @@ object Util {
         transition.addTransition(Fade())
         transition.addTransition(ChangeText())
         TransitionManager.go(Scene(root), transition)
+    }
+
+    fun dpToPx(dp: Float, res: Resources): Float {
+        return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, res.displayMetrics)
     }
 }
