@@ -9,7 +9,6 @@ import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import com.perrigogames.introcardanimationdemo.fragments.DummySettingsFragment
 import com.perrigogames.introcardanimationdemo.fragments.IntroCardTestFragment
 import com.perrigogames.introcardanimationdemo.fragments.TextZoneTestFragment
 import com.perrigogames.introcardanimationdemo.fragments.WhiteboardFragment
@@ -61,7 +60,8 @@ class DemoLauncherActivity : AppCompatActivity(), NavigationView.OnNavigationIte
         when (item.itemId) {
             R.id.nav_intro_card -> launchFragment(IntroCardTestFragment())
             R.id.nav_text_zones -> launchFragment(TextZoneTestFragment())
-            R.id.nav_settings_fragment -> launchFragment(DummySettingsFragment())
+//            R.id.nav_settings_fragment -> launchFragment(DummySettingsView(this))
+//            R.id.nav_text_fragment -> launchFragment(DummyTextView(this)))
             R.id.nav_whiteboard_fragment -> launchFragment(WhiteboardFragment())
         }
 
